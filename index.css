@@ -1,0 +1,67 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  --toast-bg: #fff;
+  --toast-color: #1f2937;
+}
+
+.dark {
+  --toast-bg: #1f2937;
+  --toast-color: #fff;
+}
+
+body {
+  @apply transition-colors duration-200;
+}
+
+.dark body {
+  @apply bg-dark-neu-base text-white;
+}
+
+/* Tremor base styles */
+.tremor-base {
+  @apply font-sans;
+}
+
+/* Custom styles for Tremor components in dark mode */
+.dark .tr-card {
+  @apply !bg-dark-neu-base;
+}
+
+.dark .tr-title {
+  @apply !text-gray-200;
+}
+
+.dark .tr-tab {
+  @apply !text-gray-400 hover:!text-gray-200;
+}
+
+.dark .tr-tab-selected {
+  @apply !text-indigo-400;
+}
+
+.dark .tr-text-default {
+  @apply !text-gray-200;
+}
+
+.dark .tr-text-title {
+  @apply !text-gray-100;
+}
+
+.dark .tr-text-metric {
+  @apply !text-gray-100;
+}
+
+/* Toast Styles */
+.Toastify__toast {
+  border-radius: 0.75rem;
+  padding: 1rem;
+  box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
+}
+
+.Toastify__toast-body {
+  font-family: inherit;
+}
